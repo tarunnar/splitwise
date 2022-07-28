@@ -9,7 +9,6 @@ SPLIT_TYPE_MISSING = "Please provide split type"
 EXPENSE_SPLIT_MISSING = "Please provide the expense splits"
 
 AUTH_TOKEN_MISSING = "Please provide you auth token"
-INVOICE_ID_MISSING = "please provide invoice id"
 AMOUNT_MISSING = "Please provide amount"
 TOTAL_VALUE_MISSING = "please provide total value"
 INVALID_TOTAL_VALUE = "Invalid total value"

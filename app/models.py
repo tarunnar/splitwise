@@ -66,7 +66,7 @@ class User(AbstractBaseUser, PermissionsMixin, Base):
 
 
 class Group(Base):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
     description = models.CharField(max_length=20)
 
@@ -78,7 +78,7 @@ class Group(Base):
 
 
 class GroupMembers(Base):
-    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="group")
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="group", db_index=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user")
 
     class Meta:
@@ -93,7 +93,7 @@ class Bill(Base):
     class SplitType(models.TextChoices):
         PERCENTAGE = 'P', _('PERCENTAGE')
         ABSOLUTE = 'A', _('ABSOLUTE')
-    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="bill_group")
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name="bill_group", db_index=True)
     paid_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="bill_user")
     total_amount = models.FloatField()
     split_type = models.CharField(
@@ -115,3 +115,7 @@ class GroupBalances(Base):
 
     class Meta:
         db_table = 'group_balances'
+        index_together = [
+            ("group", "user_to_receive"),
+        ]
+        unique_together = [['group', 'user_to_receive', 'user_to_pay']]

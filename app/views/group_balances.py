@@ -1,10 +1,8 @@
 from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework import status, exceptions
-from app.serializers.group import GroupSerializer
 from app import constants
 from app.services.balances import GroupBalanceService
-from app.services.group import GroupService
 from app.views.mixins.auth_mixin import AuthMixin
 
 

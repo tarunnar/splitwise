@@ -1,0 +1,307 @@
+{
+	"id": "39f78904-bd60-5bda-77c0-f43520431d60",
+	"name": "splitwise",
+	"description": "",
+	"order": [
+		"bd3633f8-475f-aab8-fe16-ba0df1844269",
+		"7befeeb6-d073-7cfa-61d7-4629b983a835",
+		"a6ad3aad-bf86-7e31-c5d0-b81a599b868c",
+		"97df0e33-030e-099a-39aa-afaeaf3e242b",
+		"b175ab6a-a3eb-3f45-78b9-d547dd923223",
+		"92dc85f8-662f-9be2-9102-e36d414ea390",
+		"9e006a26-ef8a-0fc3-b437-7ef7f91162b4",
+		"0d7a5568-f36b-a5f0-d91e-5e88d1b26e5e"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1658869878947,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0d7a5568-f36b-a5f0-d91e-5e88d1b26e5e",
+			"headers": "token: e175d274e5b789064b7bf06e212330cffef25660\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "e175d274e5b789064b7bf06e212330cffef25660",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/user_balances?group_id=4&user_id=4",
+			"queryParams": [
+				{
+					"key": "group_id",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "user_id",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999893416,
+			"name": "get user balances",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": []
+		},
+		{
+			"id": "7befeeb6-d073-7cfa-61d7-4629b983a835",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/user/create_user/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999914259,
+			"name": "create user",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\": \"otheer\",\n\t\"email\": \"suresh@email.com\",\n\t\"password\": \"password\"\n}"
+		},
+		{
+			"id": "92dc85f8-662f-9be2-9102-e36d414ea390",
+			"headers": "token: e175d274e5b789064b7bf06e212330cffef25660\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "e175d274e5b789064b7bf06e212330cffef25660",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/bills/?group_id=1",
+			"queryParams": [
+				{
+					"key": "group_id",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999900613,
+			"name": "get gruoup bills",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": []
+		},
+		{
+			"id": "97df0e33-030e-099a-39aa-afaeaf3e242b",
+			"headers": "token: e175d274e5b789064b7bf06e212330cffef25660\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "e175d274e5b789064b7bf06e212330cffef25660",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/group_members/?group_id=4",
+			"queryParams": [
+				{
+					"key": "group_id",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999907342,
+			"name": "get group members",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": []
+		},
+		{
+			"id": "9e006a26-ef8a-0fc3-b437-7ef7f91162b4",
+			"headers": "token: e175d274e5b789064b7bf06e212330cffef25660\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "e175d274e5b789064b7bf06e212330cffef25660",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/group_balances?group_id=4",
+			"queryParams": [
+				{
+					"key": "group_id",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999896926,
+			"name": "get group balances",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": []
+		},
+		{
+			"id": "a6ad3aad-bf86-7e31-c5d0-b81a599b868c",
+			"headers": "token: 48a7950609a724f4bd84abadcd9e11491dde6bdc\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "48a7950609a724f4bd84abadcd9e11491dde6bdc",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/group_members/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999910743,
+			"name": "register to group",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": [],
+			"rawModeData": "{\n\t\"group_id\": 4\n}"
+		},
+		{
+			"id": "b175ab6a-a3eb-3f45-78b9-d547dd923223",
+			"headers": "Content-Type: application/json\ntoken: e175d274e5b789064b7bf06e212330cffef25660\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "e175d274e5b789064b7bf06e212330cffef25660",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/bills/",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999903816,
+			"name": "add bill",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": [],
+			"rawModeData": "{\n    \"group_id\": 4,\n    \"paid_by\": 1,\n    \"expense_splits\": [\n    \t{\n\t    \t\"user_id\": 1,\n\t    \t\"amount\": 20\n    \t},\n    \t{\n\t    \t\"user_id\": 4,\n\t    \t\"amount\": 60\n    \t},\n    \t{\n\t    \t\"user_id\": 6,\n\t    \t\"amount\": 20\n    \t}\n    ],\n    \"split_type\": \"PERCENTAGE\",\n    \"total_amount\": 300\n}"
+		},
+		{
+			"id": "bd3633f8-475f-aab8-fe16-ba0df1844269",
+			"headers": "token: 03af6ce02c265c8b9317053a93849cd0637d44b2\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "token",
+					"value": "03af6ce02c265c8b9317053a93849cd0637d44b2",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://127.0.0.1:8000/splitwise/user/create_group/",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1658999917513,
+			"name": "group",
+			"description": "",
+			"collectionId": "39f78904-bd60-5bda-77c0-f43520431d60",
+			"responses": [],
+			"rawModeData": "{\n    \"name\": \"goa trip\",\n    \"description\": \"goa trip\"\n}"
+		}
+	]
+}

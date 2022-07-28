@@ -47,7 +47,6 @@ class GroupBalanceService(object):
 
     @classmethod
     def get_user_balances(cls, group_id, user_id):
-        print("hi")
         group_balance_qs = GroupBalancesRepository.get_group_balances_by_filter({
             "group_id": group_id,
             "user_to_receive_id": user_id
@@ -77,7 +76,6 @@ class GroupBalanceService(object):
                         "description": f"you should pay amount: {-amount} to user_id:{key[1]}"
                     }
                 )
-        print(group_balances_with_description)
         return {
             "status": constants.SUCCESS_STATUS,
             "group_balances": group_balances_with_description

@@ -95,6 +95,7 @@ class BillService(object):
 
     @classmethod
     def get_group_bills(cls, group_id):
+        value_to_member_map = vars(Bill.SplitType)["_value2member_map_"]
         bill_qs = BillRepository.get_bill_by_filter({
             "group_id": group_id
         })
@@ -106,7 +107,7 @@ class BillService(object):
                 "group_id": record.group_id,
                 "user_paid": record.paid_by_id,
                 "total_amount": record.total_amount,
-                "split_type": record.split_type,
+                "split_type": value_to_member_map[record.split_type].name,
                 "split_distribution": record.expense_splits
             })
             total_amount += record.total_amount
