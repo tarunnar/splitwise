@@ -1,0 +1,300 @@
+WARNING 2022-07-26 21:20:49,253 log 63110 140006212200000 Bad Request: /splitwise/user/create_user/
+ERROR 2022-07-26 21:29:56,053 log 63110 140006212200000 Internal Server Error: /splitwise/user/create_group/
+Traceback (most recent call last):
+  File "/home/manoj/PycharmProjects/splitwise/app/services/user.py", line 18, in create_user
+    User.objects.get(email=email)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+app.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group.py", line 16, in post
+    user_response = UserSrvice.create_user(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/user.py", line 24, in create_user
+    user = User.objects.create_user(email=email, password=password, name=name)
+  File "/home/manoj/PycharmProjects/splitwise/app/models.py", line 28, in create_user
+    raise ValueError('The Email must be set')
+ValueError: The Email must be set
+ERROR 2022-07-26 21:36:19,214 log 63871 140643687302720 Internal Server Error: /splitwise/user/create_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group.py", line 16, in post
+    user_response = GroupService.create_group(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group.py", line 29, in create_group
+    "owner_user_id": group.owner.user_id,
+AttributeError: 'User' object has no attribute 'user_id'
+ERROR 2022-07-26 22:21:38,167 log 66872 140509007746624 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+ERROR 2022-07-26 22:22:36,003 log 66872 140509007746624 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-26 22:24:10,369 log 66872 140509007746624 Bad Request: /splitwise/user/create_group/
+WARNING 2022-07-26 22:24:37,336 log 66872 140509007746624 Not Found: /splitwise/regiter_to_group/
+WARNING 2022-07-26 22:25:30,038 log 66872 140509007746624 Not Found: /splitwise/regiter_to_group/
+ERROR 2022-07-26 22:31:54,150 log 67375 140437387359808 Internal Server Error: /splitwise/register_to_group/
+ERROR 2022-07-26 22:32:50,049 log 67412 140495237187136 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 20, in post
+    group_membership_resp = GroupMembersService.register_to_group(group_id, user.id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group_members.py", line 19, in register_to_group
+    group_members = GroupMembers.objects.create(
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "GroupMembers.group" must be a "Group" instance.
+ERROR 2022-07-26 22:34:02,370 log 67518 140067926775360 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 20, in post
+    group_membership_resp = GroupMembersService.register_to_group(group_id, user.id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group_members.py", line 19, in register_to_group
+    group_members = GroupMembers.objects.create(
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "3": "GroupMembers.user" must be a "User" instance.
+ERROR 2022-07-26 22:43:27,550 log 67978 139903660717632 Internal Server Error: /splitwise/group_members/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'params'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 36, in get
+    group_id = request.params.get("group_id")
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'params'
+WARNING 2022-07-26 22:44:14,693 log 68135 140612853548608 Bad Request: /splitwise/group_members/
+WARNING 2022-07-28 06:28:29,571 log 17031 140286132446784 Not Found: /splitwise/bill/
+ERROR 2022-07-28 06:29:01,267 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-28 06:29:40,210 log 17031 140286132446784 Bad Request: /splitwise/bills/
+WARNING 2022-07-28 06:29:41,435 log 17031 140286132446784 Bad Request: /splitwise/bills/
+WARNING 2022-07-28 06:29:42,937 log 17031 140286132446784 Bad Request: /splitwise/bills/
+ERROR 2022-07-28 06:29:56,333 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+ERROR 2022-07-28 06:34:09,509 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 15, in post
+    bill_response = BillService.add_bill(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 64, in add_bill
+    gb1 = group_balances_map[(paid_by, record.get("user_id"))]
+KeyError: (6, 3)
+ERROR 2022-07-28 06:49:28,578 log 17844 139841416906304 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 38, in get
+    bill_response = BillService.get_group_bills(group_id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 109, in get_group_bills
+    "split_type": record.split_type.name,
+AttributeError: 'str' object has no attribute 'name'
+ERROR 2022-07-28 06:50:21,615 log 18140 140696599176768 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 38, in get
+    bill_response = BillService.get_group_bills(group_id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 110, in get_group_bills
+    "split_distribution": record.split_distribution
+AttributeError: 'Bill' object has no attribute 'split_distribution'
+ERROR 2022-07-28 06:59:09,497 log 18174 140419883259456 Internal Server Error: /splitwise/group_balances/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-28 06:59:32,243 log 18174 140419883259456 Bad Request: /splitwise/group_balances/

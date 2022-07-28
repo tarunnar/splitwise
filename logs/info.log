@@ -1,0 +1,465 @@
+INFO 2022-07-26 21:03:52,214 autoreload 62026 140332712399296 Watching for file changes with StatReloader
+INFO 2022-07-26 21:04:48,120 autoreload 62026 140332712399296 /home/manoj/PycharmProjects/splitwise/splitwise/commons.py changed, reloading.
+INFO 2022-07-26 21:04:48,348 autoreload 62097 140649175949760 Watching for file changes with StatReloader
+INFO 2022-07-26 21:17:04,925 autoreload 62097 140649175949760 /home/manoj/PycharmProjects/splitwise/splitwise/urls.py changed, reloading.
+INFO 2022-07-26 21:17:05,238 autoreload 63090 139752865903040 Watching for file changes with StatReloader
+INFO 2022-07-26 21:17:11,464 autoreload 63090 139752865903040 /home/manoj/PycharmProjects/splitwise/splitwise/urls.py changed, reloading.
+INFO 2022-07-26 21:17:11,705 autoreload 63110 140006278054336 Watching for file changes with StatReloader
+WARNING 2022-07-26 21:20:49,253 log 63110 140006212200000 Bad Request: /splitwise/user/create_user/
+ERROR 2022-07-26 21:29:56,053 log 63110 140006212200000 Internal Server Error: /splitwise/user/create_group/
+Traceback (most recent call last):
+  File "/home/manoj/PycharmProjects/splitwise/app/services/user.py", line 18, in create_user
+    User.objects.get(email=email)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 496, in get
+    raise self.model.DoesNotExist(
+app.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group.py", line 16, in post
+    user_response = UserSrvice.create_user(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/user.py", line 24, in create_user
+    user = User.objects.create_user(email=email, password=password, name=name)
+  File "/home/manoj/PycharmProjects/splitwise/app/models.py", line 28, in create_user
+    raise ValueError('The Email must be set')
+ValueError: The Email must be set
+INFO 2022-07-26 21:31:48,631 autoreload 63110 140006278054336 /home/manoj/PycharmProjects/splitwise/app/views/group.py changed, reloading.
+INFO 2022-07-26 21:31:48,919 autoreload 63678 139958210834880 Watching for file changes with StatReloader
+INFO 2022-07-26 21:32:53,093 autoreload 63678 139958210834880 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 21:32:53,297 autoreload 63720 140427496432064 Watching for file changes with StatReloader
+INFO 2022-07-26 21:34:15,812 autoreload 63720 140427496432064 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 21:34:16,044 autoreload 63777 140539396977088 Watching for file changes with StatReloader
+INFO 2022-07-26 21:34:26,356 autoreload 63777 140539396977088 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 21:34:26,550 autoreload 63790 140149572354496 Watching for file changes with StatReloader
+INFO 2022-07-26 21:34:36,841 autoreload 63790 140149572354496 /home/manoj/PycharmProjects/splitwise/app/views/group.py changed, reloading.
+INFO 2022-07-26 21:34:37,122 autoreload 63796 140695395647936 Watching for file changes with StatReloader
+INFO 2022-07-26 21:35:48,391 autoreload 63796 140695395647936 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 21:35:48,621 autoreload 63871 140643753157056 Watching for file changes with StatReloader
+ERROR 2022-07-26 21:36:19,214 log 63871 140643687302720 Internal Server Error: /splitwise/user/create_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group.py", line 16, in post
+    user_response = GroupService.create_group(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group.py", line 29, in create_group
+    "owner_user_id": group.owner.user_id,
+AttributeError: 'User' object has no attribute 'user_id'
+INFO 2022-07-26 21:36:58,973 autoreload 63871 140643753157056 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-26 21:36:59,229 autoreload 63934 139794156016064 Watching for file changes with StatReloader
+INFO 2022-07-26 21:40:01,380 autoreload 63934 139794156016064 /home/manoj/PycharmProjects/splitwise/app/views/group.py changed, reloading.
+INFO 2022-07-26 21:40:01,603 autoreload 64053 140472250651072 Watching for file changes with StatReloader
+INFO 2022-07-26 21:42:37,423 autoreload 64053 140472250651072 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:42:37,727 autoreload 64133 140136553669056 Watching for file changes with StatReloader
+INFO 2022-07-26 21:42:46,930 autoreload 64133 140136553669056 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:42:47,223 autoreload 64389 139790079087040 Watching for file changes with StatReloader
+INFO 2022-07-26 21:44:58,113 autoreload 64389 139790079087040 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:44:58,308 autoreload 64972 139935516021184 Watching for file changes with StatReloader
+INFO 2022-07-26 21:45:34,030 autoreload 64972 139935516021184 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:45:34,278 autoreload 64995 140274101731776 Watching for file changes with StatReloader
+INFO 2022-07-26 21:46:31,235 autoreload 64995 140274101731776 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:46:31,502 autoreload 65046 140658489029056 Watching for file changes with StatReloader
+INFO 2022-07-26 21:53:39,302 autoreload 65046 140658489029056 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-26 21:53:39,597 autoreload 65326 139941230592448 Watching for file changes with StatReloader
+INFO 2022-07-26 21:53:53,888 autoreload 65326 139941230592448 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:53:54,109 autoreload 65357 140335840469440 Watching for file changes with StatReloader
+INFO 2022-07-26 21:54:01,291 autoreload 65357 140335840469440 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:54:01,515 autoreload 65371 139847658250688 Watching for file changes with StatReloader
+INFO 2022-07-26 21:54:39,146 autoreload 65371 139847658250688 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:54:39,336 autoreload 65386 140316531462592 Watching for file changes with StatReloader
+INFO 2022-07-26 21:55:30,109 autoreload 65386 140316531462592 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-26 21:55:30,310 autoreload 65449 140048485802432 Watching for file changes with StatReloader
+INFO 2022-07-26 21:55:57,711 autoreload 65449 140048485802432 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:55:57,901 autoreload 65477 139842056077760 Watching for file changes with StatReloader
+INFO 2022-07-26 21:56:05,097 autoreload 65477 139842056077760 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:56:05,309 autoreload 65491 140248700985792 Watching for file changes with StatReloader
+INFO 2022-07-26 21:56:57,086 autoreload 65491 140248700985792 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:56:57,290 autoreload 65527 139862399455680 Watching for file changes with StatReloader
+INFO 2022-07-26 21:57:04,438 autoreload 65527 139862399455680 /home/manoj/PycharmProjects/splitwise/app/models.py changed, reloading.
+INFO 2022-07-26 21:57:04,640 autoreload 65532 140280973971904 Watching for file changes with StatReloader
+INFO 2022-07-26 21:58:18,761 autoreload 65532 140280973971904 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-26 21:58:18,968 autoreload 65578 140222970884544 Watching for file changes with StatReloader
+INFO 2022-07-26 21:59:31,139 autoreload 65578 140222970884544 /home/manoj/PycharmProjects/splitwise/app/migrations/0001_initial.py changed, reloading.
+INFO 2022-07-26 21:59:31,335 autoreload 65628 139902567825856 Watching for file changes with StatReloader
+INFO 2022-07-26 22:05:46,014 autoreload 65628 139902567825856 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 22:05:46,214 autoreload 66085 140438878683584 Watching for file changes with StatReloader
+INFO 2022-07-26 22:15:34,396 autoreload 66085 140438878683584 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 22:15:34,609 autoreload 66632 139671010873792 Watching for file changes with StatReloader
+INFO 2022-07-26 22:16:48,816 autoreload 66632 139671010873792 /home/manoj/PycharmProjects/splitwise/app/urls.py changed, reloading.
+INFO 2022-07-26 22:16:49,019 autoreload 66689 140636697387456 Watching for file changes with StatReloader
+INFO 2022-07-26 22:17:55,212 autoreload 66689 140636697387456 /home/manoj/PycharmProjects/splitwise/app/urls.py changed, reloading.
+INFO 2022-07-26 22:17:55,520 autoreload 66739 139812338733504 Watching for file changes with StatReloader
+INFO 2022-07-26 22:19:00,399 autoreload 66739 139812338733504 /home/manoj/PycharmProjects/splitwise/app/urls.py changed, reloading.
+INFO 2022-07-26 22:19:00,618 autoreload 66872 140509073600960 Watching for file changes with StatReloader
+ERROR 2022-07-26 22:21:38,167 log 66872 140509007746624 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+ERROR 2022-07-26 22:22:36,003 log 66872 140509007746624 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-26 22:24:10,369 log 66872 140509007746624 Bad Request: /splitwise/user/create_group/
+WARNING 2022-07-26 22:24:37,336 log 66872 140509007746624 Not Found: /splitwise/regiter_to_group/
+WARNING 2022-07-26 22:25:30,038 log 66872 140509007746624 Not Found: /splitwise/regiter_to_group/
+INFO 2022-07-26 22:26:10,405 autoreload 66872 140509073600960 /home/manoj/PycharmProjects/splitwise/app/urls.py changed, reloading.
+INFO 2022-07-26 22:26:10,631 autoreload 67136 140499076125120 Watching for file changes with StatReloader
+INFO 2022-07-26 22:27:00,464 autoreload 67136 140499076125120 /home/manoj/PycharmProjects/splitwise/app/views/group_members.py changed, reloading.
+INFO 2022-07-26 22:27:00,677 autoreload 67174 140299342012864 Watching for file changes with StatReloader
+INFO 2022-07-26 22:28:39,380 autoreload 67174 140299342012864 /home/manoj/PycharmProjects/splitwise/app/views/group_members.py changed, reloading.
+INFO 2022-07-26 22:28:39,610 autoreload 67219 140391751872960 Watching for file changes with StatReloader
+INFO 2022-07-26 22:30:33,405 autoreload 67219 140391751872960 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:30:33,627 autoreload 67321 140541628162496 Watching for file changes with StatReloader
+INFO 2022-07-26 22:31:42,520 autoreload 67375 140437453214144 Watching for file changes with StatReloader
+ERROR 2022-07-26 22:31:54,150 log 67375 140437387359808 Internal Server Error: /splitwise/register_to_group/
+INFO 2022-07-26 22:32:13,105 autoreload 67375 140437453214144 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:32:13,310 autoreload 67412 140495303041472 Watching for file changes with StatReloader
+ERROR 2022-07-26 22:32:50,049 log 67412 140495237187136 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 20, in post
+    group_membership_resp = GroupMembersService.register_to_group(group_id, user.id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group_members.py", line 19, in register_to_group
+    group_members = GroupMembers.objects.create(
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "1": "GroupMembers.group" must be a "Group" instance.
+INFO 2022-07-26 22:33:23,507 autoreload 67412 140495303041472 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:23,749 autoreload 67455 139660159144384 Watching for file changes with StatReloader
+INFO 2022-07-26 22:33:35,028 autoreload 67455 139660159144384 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:35,225 autoreload 67471 140238800306624 Watching for file changes with StatReloader
+INFO 2022-07-26 22:33:39,426 autoreload 67471 140238800306624 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:39,635 autoreload 67480 140141884457408 Watching for file changes with StatReloader
+INFO 2022-07-26 22:33:42,808 autoreload 67480 140141884457408 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:43,084 autoreload 67485 140003025682880 Watching for file changes with StatReloader
+INFO 2022-07-26 22:33:49,325 autoreload 67485 140003025682880 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:49,547 autoreload 67504 140023379984832 Watching for file changes with StatReloader
+INFO 2022-07-26 22:33:57,802 autoreload 67504 140023379984832 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:33:58,066 autoreload 67518 140067992629696 Watching for file changes with StatReloader
+ERROR 2022-07-26 22:34:02,370 log 67518 140067926775360 Internal Server Error: /splitwise/register_to_group/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 20, in post
+    group_membership_resp = GroupMembersService.register_to_group(group_id, user.id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/group_members.py", line 19, in register_to_group
+    group_members = GroupMembers.objects.create(
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "3": "GroupMembers.user" must be a "User" instance.
+INFO 2022-07-26 22:34:14,466 autoreload 67518 140067992629696 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:34:14,683 autoreload 67530 140004474282432 Watching for file changes with StatReloader
+INFO 2022-07-26 22:34:49,295 autoreload 67530 140004474282432 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:34:49,534 autoreload 67589 140236241740224 Watching for file changes with StatReloader
+INFO 2022-07-26 22:37:44,261 autoreload 67589 140236241740224 /home/manoj/PycharmProjects/splitwise/app/views/group_members.py changed, reloading.
+INFO 2022-07-26 22:37:44,573 autoreload 67727 140632767168960 Watching for file changes with StatReloader
+INFO 2022-07-26 22:40:34,311 autoreload 67727 140632767168960 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-26 22:40:34,514 autoreload 67895 139899776631232 Watching for file changes with StatReloader
+INFO 2022-07-26 22:41:22,328 autoreload 67895 139899776631232 /home/manoj/PycharmProjects/splitwise/app/urls.py changed, reloading.
+INFO 2022-07-26 22:41:22,542 autoreload 67938 140508071993792 Watching for file changes with StatReloader
+INFO 2022-07-26 22:42:31,763 autoreload 67938 140508071993792 /home/manoj/PycharmProjects/splitwise/app/views/group_members.py changed, reloading.
+INFO 2022-07-26 22:42:31,995 autoreload 67978 139903801033152 Watching for file changes with StatReloader
+ERROR 2022-07-26 22:43:27,550 log 67978 139903660717632 Internal Server Error: /splitwise/group_members/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'params'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/group_members.py", line 36, in get
+    group_id = request.params.get("group_id")
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'params'
+INFO 2022-07-26 22:44:04,586 autoreload 67978 139903801033152 /home/manoj/PycharmProjects/splitwise/app/views/group_members.py changed, reloading.
+INFO 2022-07-26 22:44:04,829 autoreload 68135 140612919402944 Watching for file changes with StatReloader
+WARNING 2022-07-26 22:44:14,693 log 68135 140612853548608 Bad Request: /splitwise/group_members/
+INFO 2022-07-26 22:46:13,971 autoreload 68135 140612919402944 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-26 22:46:14,221 autoreload 68245 140631135314368 Watching for file changes with StatReloader
+INFO 2022-07-26 23:16:21,084 autoreload 68245 140631135314368 /home/manoj/PycharmProjects/splitwise/app/views/group.py changed, reloading.
+INFO 2022-07-26 23:16:21,330 autoreload 69443 140434216985024 Watching for file changes with StatReloader
+INFO 2022-07-26 23:18:13,843 autoreload 69443 140434216985024 /home/manoj/PycharmProjects/splitwise/app/views/group.py changed, reloading.
+INFO 2022-07-26 23:18:14,048 autoreload 69509 139710141837760 Watching for file changes with StatReloader
+INFO 2022-07-26 23:21:04,613 autoreload 69509 139710141837760 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-26 23:21:04,815 autoreload 69667 140313662906816 Watching for file changes with StatReloader
+INFO 2022-07-27 05:05:09,830 autoreload 69667 140313662906816 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-27 05:05:10,126 autoreload 72052 140210618008000 Watching for file changes with StatReloader
+INFO 2022-07-27 05:14:03,050 autoreload 72052 140210618008000 /home/manoj/PycharmProjects/splitwise/app/serializers/group.py changed, reloading.
+INFO 2022-07-27 05:14:03,355 autoreload 72543 140609259262400 Watching for file changes with StatReloader
+INFO 2022-07-27 05:42:05,297 autoreload 72543 140609259262400 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-27 05:42:05,541 autoreload 73872 140367997579712 Watching for file changes with StatReloader
+INFO 2022-07-27 05:44:57,348 autoreload 73872 140367997579712 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-27 05:44:57,652 autoreload 74014 140269787668928 Watching for file changes with StatReloader
+INFO 2022-07-27 05:49:23,538 autoreload 74014 140269787668928 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-27 05:49:23,739 autoreload 74190 140326717919680 Watching for file changes with StatReloader
+INFO 2022-07-27 05:49:30,959 autoreload 74190 140326717919680 /home/manoj/PycharmProjects/splitwise/app/services/group.py changed, reloading.
+INFO 2022-07-27 05:49:31,177 autoreload 74194 140370881257920 Watching for file changes with StatReloader
+INFO 2022-07-27 05:53:19,054 autoreload 74194 140370881257920 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-27 05:53:19,334 autoreload 74453 140118189097408 Watching for file changes with StatReloader
+INFO 2022-07-27 05:57:53,178 autoreload 74453 140118189097408 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-27 05:57:53,488 autoreload 74817 140258916487616 Watching for file changes with StatReloader
+INFO 2022-07-27 06:01:13,985 autoreload 74817 140258916487616 /home/manoj/PycharmProjects/splitwise/app/services/group_members.py changed, reloading.
+INFO 2022-07-27 06:01:14,173 autoreload 74967 140637002486208 Watching for file changes with StatReloader
+INFO 2022-07-27 06:01:37,690 autoreload 74967 140637002486208 /home/manoj/PycharmProjects/splitwise/app/services/user.py changed, reloading.
+INFO 2022-07-27 06:01:37,943 autoreload 74976 139702023000512 Watching for file changes with StatReloader
+INFO 2022-07-27 10:52:56,802 autoreload 74976 139702023000512 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-27 10:52:57,097 autoreload 87325 139850936521152 Watching for file changes with StatReloader
+INFO 2022-07-27 11:00:47,830 autoreload 87325 139850936521152 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-27 11:00:48,117 autoreload 87672 140139944309184 Watching for file changes with StatReloader
+INFO 2022-07-27 11:06:41,358 autoreload 87672 140139944309184 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-27 11:06:41,654 autoreload 88015 140512397197760 Watching for file changes with StatReloader
+INFO 2022-07-27 11:07:55,104 autoreload 88015 140512397197760 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-27 11:07:55,310 autoreload 88103 139737731436992 Watching for file changes with StatReloader
+INFO 2022-07-28 06:23:59,262 autoreload 17031 140286198301120 Watching for file changes with StatReloader
+WARNING 2022-07-28 06:28:29,571 log 17031 140286132446784 Not Found: /splitwise/bill/
+ERROR 2022-07-28 06:29:01,267 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-28 06:29:40,210 log 17031 140286132446784 Bad Request: /splitwise/bills/
+WARNING 2022-07-28 06:29:41,435 log 17031 140286132446784 Bad Request: /splitwise/bills/
+WARNING 2022-07-28 06:29:42,937 log 17031 140286132446784 Bad Request: /splitwise/bills/
+ERROR 2022-07-28 06:29:56,333 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+ERROR 2022-07-28 06:34:09,509 log 17031 140286132446784 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 15, in post
+    bill_response = BillService.add_bill(
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 64, in add_bill
+    gb1 = group_balances_map[(paid_by, record.get("user_id"))]
+KeyError: (6, 3)
+INFO 2022-07-28 06:41:19,599 autoreload 17031 140286198301120 /home/manoj/PycharmProjects/splitwise/app/services/bill.py changed, reloading.
+INFO 2022-07-28 06:41:19,844 autoreload 17844 139841482760640 Watching for file changes with StatReloader
+ERROR 2022-07-28 06:49:28,578 log 17844 139841416906304 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 38, in get
+    bill_response = BillService.get_group_bills(group_id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 109, in get_group_bills
+    "split_type": record.split_type.name,
+AttributeError: 'str' object has no attribute 'name'
+INFO 2022-07-28 06:50:14,699 autoreload 17844 139841482760640 /home/manoj/PycharmProjects/splitwise/app/services/bill.py changed, reloading.
+INFO 2022-07-28 06:50:14,918 autoreload 18140 140696665031104 Watching for file changes with StatReloader
+ERROR 2022-07-28 06:50:21,615 log 18140 140696599176768 Internal Server Error: /splitwise/bills/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 26, in dispatch
+    return super(AuthMixin, self).dispatch(request, *args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/manoj/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/bill.py", line 38, in get
+    bill_response = BillService.get_group_bills(group_id)
+  File "/home/manoj/PycharmProjects/splitwise/app/services/bill.py", line 110, in get_group_bills
+    "split_distribution": record.split_distribution
+AttributeError: 'Bill' object has no attribute 'split_distribution'
+INFO 2022-07-28 06:50:54,645 autoreload 18140 140696665031104 /home/manoj/PycharmProjects/splitwise/app/services/bill.py changed, reloading.
+INFO 2022-07-28 06:50:54,850 autoreload 18174 140419949113792 Watching for file changes with StatReloader
+ERROR 2022-07-28 06:59:09,497 log 18174 140419883259456 Internal Server Error: /splitwise/group_balances/
+Traceback (most recent call last):
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/manoj/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/manoj/PycharmProjects/splitwise/app/views/mixins/auth_mixin.py", line 13, in dispatch
+    raise exceptions.NotAuthenticated({
+rest_framework.exceptions.NotAuthenticated: {'message': ErrorDetail(string='Please provide you auth token', code='not_authenticated')}
+WARNING 2022-07-28 06:59:32,243 log 18174 140419883259456 Bad Request: /splitwise/group_balances/
+INFO 2022-07-28 07:08:33,320 autoreload 18174 140419949113792 /home/manoj/PycharmProjects/splitwise/app/views/group_balances.py changed, reloading.
+INFO 2022-07-28 07:08:33,626 autoreload 19016 140414639526336 Watching for file changes with StatReloader
+INFO 2022-07-28 07:09:41,992 autoreload 19016 140414639526336 /home/manoj/PycharmProjects/splitwise/app/views/group_balances.py changed, reloading.
+INFO 2022-07-28 07:09:42,218 autoreload 19077 139798685917632 Watching for file changes with StatReloader
+INFO 2022-07-28 07:11:20,006 autoreload 19077 139798685917632 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-28 07:11:20,253 autoreload 19156 140172223504832 Watching for file changes with StatReloader
+INFO 2022-07-28 07:11:33,637 autoreload 19156 140172223504832 /home/manoj/PycharmProjects/splitwise/app/constants.py changed, reloading.
+INFO 2022-07-28 07:11:33,857 autoreload 19160 140384405500352 Watching for file changes with StatReloader
+INFO 2022-07-28 07:14:37,213 autoreload 19160 140384405500352 /home/manoj/PycharmProjects/splitwise/app/services/balances.py changed, reloading.
+INFO 2022-07-28 07:14:37,458 autoreload 19302 139814603874752 Watching for file changes with StatReloader
+INFO 2022-07-28 07:14:55,897 autoreload 19302 139814603874752 /home/manoj/PycharmProjects/splitwise/app/services/balances.py changed, reloading.
+INFO 2022-07-28 07:14:56,126 autoreload 19352 140403079651776 Watching for file changes with StatReloader
+INFO 2022-07-28 07:17:00,485 autoreload 19352 140403079651776 /home/manoj/PycharmProjects/splitwise/app/services/balances.py changed, reloading.
+INFO 2022-07-28 07:17:00,773 autoreload 19419 140564475290048 Watching for file changes with StatReloader
+INFO 2022-07-28 07:18:11,992 autoreload 19419 140564475290048 /home/manoj/PycharmProjects/splitwise/app/services/balances.py changed, reloading.
+INFO 2022-07-28 07:18:12,264 autoreload 19477 140347372278208 Watching for file changes with StatReloader
+INFO 2022-07-28 07:18:27,684 autoreload 19477 140347372278208 /home/manoj/PycharmProjects/splitwise/app/services/balances.py changed, reloading.
+INFO 2022-07-28 07:18:27,916 autoreload 19488 140442180403648 Watching for file changes with StatReloader
+INFO 2022-07-28 07:20:15,884 autoreload 19488 140442180403648 /home/manoj/PycharmProjects/splitwise/app/views/group_user_balances_view.py changed, reloading.
+INFO 2022-07-28 07:20:16,085 autoreload 19584 140511011619264 Watching for file changes with StatReloader
